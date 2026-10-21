@@ -1,0 +1,22 @@
+[package]
+name = "jiggler"
+version = "1.0.0"
+edition = "2024"
+rust-version = "1.87"
+description = "Keeps your Mac awake and your status Available by moving the pointer while you're idle."
+authors = ["Adil"]
+license = "PolyForm-Noncommercial-1.0.0"
+repository = "https://github.com/adilkhali/jiggler"
+readme = "README.md"
+keywords = ["macos", "caffeinate", "mouse-jiggler", "keep-awake"]
+publish = false
+
+[dependencies]
+objc2 = "0.6"
+objc2-app-kit = "0.3"
+objc2-foundation = "0.3"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
